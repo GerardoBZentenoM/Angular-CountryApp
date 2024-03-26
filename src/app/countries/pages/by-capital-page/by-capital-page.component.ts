@@ -16,7 +16,6 @@ constructor(private countriesService: CountriesService){
 
   searchByCapital(term:string){
     console.log("Sequiere buscar la capital: ",term);
-    this.countriesService.searchCapital(term).subscribe( countries => this.countries = countries )
-
+    this.countriesService.searchCapital(term).subscribe( countries => {this.countries = countries })
   }
 }

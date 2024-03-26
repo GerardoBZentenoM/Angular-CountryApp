@@ -20,7 +20,7 @@
         <td><img [src]="country.flags.svg" [alt]="country.name.official"></td>
         <td>{{country.name.official}}</td>
         <td>{{country.capital}}</td>
-        <td>{{country.population}}</td>
+        <td>{{country.population | number}}</td>
         <td><a href="#">Details</a></td>
       </tr>
     </tbody>
