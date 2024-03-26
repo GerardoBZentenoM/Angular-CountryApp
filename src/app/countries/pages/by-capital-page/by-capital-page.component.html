@@ -2,15 +2,16 @@
 <div class="row">
   <div class="col">
     <shared-searchBox
-    (onValue)="searchByCapital($event)"
-    placeholder="Search by capital..."></shared-searchBox>
+      (onValue)="searchByCapital($event)"
+      placeholder="Search by capital..."
+    ></shared-searchBox>
   </div>
 </div>
 
 <div class="row">
   <div class="col">
     Results:
-    <hr>
+    <hr />
 
     <countries-table [countries]="countries"></countries-table>
     <!-- <ul>
@@ -18,5 +19,6 @@
         {{country.capital}} - {{country.population}}
       </li>
     </ul> -->
+    <shared-loading-spinner *ngIf="isLoading"></shared-loading-spinner>
   </div>
 </div>

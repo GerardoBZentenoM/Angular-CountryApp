@@ -5,17 +5,20 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-by-capital-page',
   templateUrl: './by-capital-page.component.html',
-  styles: ``
+  styles: ``,
 })
 export class ByCapitalPageComponent {
-constructor(private countriesService: CountriesService){
+  constructor(private countriesService: CountriesService) {}
 
-}
+  public countries: Country[] = [];
+  public isLoading: boolean = false;
 
-  public countries: Country[] = []
-
-  searchByCapital(term:string){
-    console.log("Sequiere buscar la capital: ",term);
-    this.countriesService.searchCapital(term).subscribe( countries => {this.countries = countries })
+  searchByCapital(term: string) {
+    console.log('Sequiere buscar la capital: ', term);
+    this.isLoading = true;
+    this.countriesService.searchCapital(term).subscribe((countries) => {
+      this.countries = countries;
+      this.isLoading = false;
+    });
   }
 }
