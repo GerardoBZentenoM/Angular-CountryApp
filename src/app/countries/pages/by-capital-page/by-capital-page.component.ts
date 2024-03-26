@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styles: ``
 })
 export class ByCapitalPageComponent {
+  searchByCapital(term:string){
+    console.log("Sequiere buscar la capital: ",term);
 
+  }
 }
