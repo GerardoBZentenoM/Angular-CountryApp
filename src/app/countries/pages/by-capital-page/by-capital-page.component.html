@@ -1,4 +1,6 @@
 <h2>By Capital</h2>
+<hr />
+
 <div class="row">
   <div class="col">
     <shared-searchBox
@@ -12,15 +14,9 @@
 
 <div class="row">
   <div class="col">
-    Results:
     <hr />
 
     <countries-table [countries]="countries"></countries-table>
-    <!-- <ul>
-      <li *ngFor="let country of countries" >
-        {{country.capital}} - {{country.population}}
-      </li>
-    </ul> -->
     <shared-loading-spinner *ngIf="isLoading"></shared-loading-spinner>
   </div>
 </div>
